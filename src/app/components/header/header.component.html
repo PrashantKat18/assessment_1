@@ -1,0 +1,55 @@
+<div id="topbar" class="d-none d-lg-flex p-4 align-items-center fixed-top">
+  <div class="container d-flex">
+    <div class="contact-info mr-auto pt-2">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;
+      <a>prashantkatiyar10796@gmail.com</a>
+    </div>
+    <div class="contact-info ml-auto pt-2">
+      <i class="fa fa-phone" aria-hidden="true"></i>
+      +91 8840091275
+      &nbsp;<a href="https://www.linkedin.com/in/prashant-katiyar-259378177/"><i class="fa fa-linkedin-square"
+          aria-hidden="true"></i></a>
+      &nbsp;<a href="https://twitter.com/Prashan06902633"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+    </div>
+    <div class="social-links">
+      <i style="background-color: aliceblue;" styclass="icofont-twitter"></i>
+    </div>&nbsp;
+    <div class="py-2 pr-3 font-weight-bold text-warning" *ngIf="this.addProvider.userName == 'abc@media.com'">Tom</div>
+    <div class="py-2 pr-3 font-weight-bold text-warning" *ngIf="this.addProvider.userName == 'def@media.com'">Dick</div>
+
+
+    <div *ngIf="!this.addProvider.isUserLoggedIn">
+      <button type="button" class="btn btn-outline-primary" routerLink="login">Login</button>
+    </div>
+    <div *ngIf="this.addProvider.isUserLoggedIn">
+      <button type="button" class="btn btn-outline-primary" (click)="logout()">logout</button>
+    </div>
+  </div>
+</div>
+<header id="header" class="fixed-top">
+  <div class="container p-0">
+    <nav class="navbar navbar-expand-lg navbar-light pt-0 pb-0 ">
+      <h1 class="navbar-brand logo">Prashant <span>Kat</span></h1>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link pr-4" routerLink="home">HOME</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link pr-4" routerLink="about">ABOUT</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link pr-4" routerLink="gallery">GALLERY</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link pr-4" routerLink="contactus">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
